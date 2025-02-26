@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- tailwind css & daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- common feature setting -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-800">
+    <section class="min-h-screen max-w-md mx-auto py-6 bg-gray-200">
+        <header >
+            <nav class="flex justify-around items-center">
+                <img src="assets/Group.png" alt="">
+                <div>
+                    <h1 class="text-3xl font-bold">$ <span id="main-balance">4500</span></h1>
+                    <p class="">available balance</p>
+                </div>
+                <button class="">logout</button>
+            </nav>
+            <hr class="border-black my-4">
+
+            <section class="p-3">
+                <h1 class="text-2xl font-bold mb-2">Welcome to Payooo!</h1>
+                <p>Enjoy easy and convenient financial services with us. Cashout charge is low</p>
+                <div class="grid grid-cols-3 mt-10 cursor-pointer">
+                    <!-- card-1 -->
+                    <div id="toggle-add" class="border  p-4 text-center">
+                        <img class="w-8 mx-auto" src="assets/wallet 1.png" alt="">
+                        <h2 class="font-semibold">Add Money</h2>
+                    </div>
+                    <!-- card-2 -->
+                    <div id="toggle-out" class="border p-4 text-center">
+                        <img class="w-8 mx-auto" src="assets/send 1.png" alt="">
+                        <h2 class="font-semibold">Cash out</h2>
+                    </div>
+                    <!-- card-3 -->
+                    <div class="border p-3 text-center">
+                        <img class="w-8 mx-auto" src="assets/money 1.png" alt="">
+                        <h2 class="font-semibold">Transfer Money</h2>
+                    </div>
+                    <!-- card-4 -->
+                    <div class="border p-4 text-center">
+                        <img class="w-8 mx-auto" src="assets/Group1.png" alt="">
+                        <h2 class="font-semibold">Get Bonus</h2>
+                    </div>
+                    <!-- card-5 -->
+                    <div class="border p-4 text-center">
+                        <img class="w-8 mx-auto" src="assets/purse 1.png" alt="">
+                        <h2 class="font-semibold">Pay Bill</h2>
+                    </div>
+                    <!-- card-6 -->
+                    <div class="border p-4 text-center">
+                        <img class="w-8 mx-auto" src="assets/transaction 1.png" alt="">
+                        <h2 class="font-semibold">Transactions</h2>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- section for add money -->
+            <section id="add-money">
+                <h2 class="text-2xl font-bold pl-8">Add Money</h2>
+                <div class="hero">
+                    <div class="card w-full ">
+                        <form class="card-body">
+                            <label for="">Select Bank</label>
+                            <select class="select select-bordered w-full">
+                                <option disabled selected>Select bank</option>
+                                <option value="Bkash">Bkash</option>
+                                <option value="Nagad">Nagad</option>
+                                <option value="DBBL">DBBL</option>
+                            </select>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Account number</span>
+                                </label>
+                                <input id="account-number" value="" type="number" placeholder="type your account number"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Amount</span>
+                                </label>
+                                <input id="amount" type="number" placeholder="type your amount"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">PIN</span>
+                                </label>
+                                <input id="pin" value="" type="text" placeholder="type your PIN" class="input input-bordered" required />
+                                <label class="label">
+                                    <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                </label>
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="add" class="btn btn-primary text-white border-none bg-blue-700">Add Money</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- section for cash out -->
+            <section id="cash-out">
+                <h2 class="text-2xl font-bold pl-8">Cash out</h2>
+                <div class="hero">
+                    <div class="card w-full ">
+                        <form class="card-body">
+                            
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Account number</span>
+                                </label>
+                                <input id="account-number" value="" type="number" placeholder="type your account number"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Amount</span>
+                                </label>
+                                <input id="amount-out" type="number" placeholder="type your amount" class="input input-bordered"
+                                    required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">PIN</span>
+                                </label>
+                                <input id="pin" value="" type="text" placeholder="type your PIN" class="input input-bordered"
+                                    required />
+                                <label class="label">
+                                    <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                </label>
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="out" class="btn btn-primary text-white border-none bg-blue-700">Cash out</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </header>
+    </section>
+
+
+    <script src="addMoney.js"></script>
+    <script src="toggle.js"></script>
+    <script src="cashOut.js"></script>
+</body>
+</html>

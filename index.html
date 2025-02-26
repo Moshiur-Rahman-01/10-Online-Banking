@@ -26,8 +26,8 @@
         <header>
             <nav class="flex justify-center items-center mt-10">
                 <div class="flex justify-center items-center mt-10 mb-10 w-9/12  relative">
-                    <img class="w-48 absolute" src="Rectangle 1.png" alt="">
-                    <img class="w-16" src="Group.png" alt="">
+                    <img class="w-48 absolute" src="assets/Rectangle 1.png" alt="">
+                    <img class="w-16" src="assets/Group.png" alt="">
                 </div>
             </nav>
         </header>
@@ -39,24 +39,27 @@
                         <label class="label">
                             <span class="label-text">Account number</span>
                         </label>
-                        <input type="number" placeholder="type your account number" class="input input-bordered" required />
+                        <input id="account-number" value="" type="number" placeholder="type your account number" class="input input-bordered" required />
                     </div>
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text">PIN</span>
                         </label>
-                        <input type="text" placeholder="type your PIN" class="input input-bordered" required />
+                        <input id="pin" value="" type="text" placeholder="type your PIN" class="input input-bordered" required />
                         <label class="label">
                             <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
                     <div class="form-control mt-6">
-                        <button class="btn btn-primary">Login</button>
+                        <button id="login-btn" class="btn btn-primary">Login</button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
     
+
+
+    <script src="index.js"></script>
 </body>
 </html>
