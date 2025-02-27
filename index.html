@@ -24,34 +24,34 @@
 <body class="bg-slate-800">
     <section class="min-h-screen max-w-md mx-auto py-6 bg-gray-200">
         <header>
-            <nav class="flex justify-center items-center mt-10">
-                <div class="flex justify-center items-center  w-full relative">
-                    <img class="w-60" src="assets/Rectangle 1.png" alt="">
-                    <img class="top-12 absolute" src="assets/Group.png" alt="">
+            <nav class="flex justify-center items-center mt-32 mb-10">
+                <div class="flex justify-center items-center w-full relative">
+                    <img class=" absolute" src="assets/Rectangle 1.png" alt="">
+                    <img class="z-10" src="assets/Group.png" alt="">
                 </div>
             </nav>
         </header>
         <!-- login section -->
         <div class="hero">
-            <div class="card bg-base-100 w-full max-w-sm shadow-2xl">
+            <div class="card bg-base-100 w-full max-w-sm border-none rounded-3xl">
                 <form class="card-body">
                     <div class="form-control">
                         <label class="label">
-                            <span class="label-text">Account number</span>
+                            <span class="font-semibold">Mobile number</span>
                         </label>
-                        <input id="account-number" value="" type="number" placeholder="type your account number" class="input input-bordered" required />
+                        <input id="account-number" value="" type="number" placeholder="Enter your number" class="input bg-gray-100 rounded-3xl" required/>
                     </div>
                     <div class="form-control">
                         <label class="label">
-                            <span class="label-text">PIN</span>
+                            <span class="font-semibold">4 Digit PIN</span>
                         </label>
-                        <input id="pin" value="" type="text" placeholder="type your PIN" class="input input-bordered" required />
+                        <input id="pin" value="" type="text" placeholder="Enter 4 Digit PIN" class="input bg-gray-100 rounded-3xl" required />
                         <label class="label">
                             <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
                     <div class="form-control mt-6">
-                        <button id="login-btn" class="btn btn-primary">Login</button>
+                        <button id="login-btn" class="btn btn-primary border-none text-white text-lg bg-blue-600 rounded-3xl">Login</button>
                     </div>
                 </form>
             </div>
