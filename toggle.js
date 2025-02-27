@@ -5,6 +5,8 @@ document.getElementById("toggle-add").addEventListener("click",
     function(){
         handleToggle("add-money","block");
         handleToggle("cash-out","none");
+        handleToggle("tran-history", "none");
+
     }
 )
 
@@ -12,6 +14,8 @@ document.getElementById("toggle-out").addEventListener("click",
     function () {
         handleToggle("add-money", "none");
         handleToggle("cash-out", "block");
+        handleToggle("tran-history", "none");
+
     }
 )
 
