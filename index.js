@@ -5,15 +5,15 @@ document.getElementById("login-btn").addEventListener("click",
         const accountNumber = document.getElementById("account-number").value;
         const pin = document.getElementById("pin").value;
         if(accountNumber.length === 11){
-            if(pin === "7010"){
+            if(pin === "1234"){
                 window.location.href = "main.html";
             }
             else{
-                alert("PiN thik kore de mdrcd");
+                alert("PiN thik koro");
             }
         }
         else{
-            alert("Formal: Need a valid account number \nMy honest reaction -> khanki magi...");
+            alert("Need a valid account number");
         }
     }
 )

@@ -64,7 +64,7 @@
                         <h2 class="font-semibold">Pay Bill</h2>
                     </div>
                     <!-- card-6 -->
-                    <div class="border p-4 text-center">
+                    <div id="transection-box" class="border p-4 text-center">
                         <img class="w-8 mx-auto" src="assets/transaction 1.png" alt="">
                         <h2 class="font-semibold">Transactions</h2>
                     </div>
@@ -141,7 +141,7 @@
                                 <label class="label">
                                     <span class="label-text">PIN</span>
                                 </label>
-                                <input id="pin" value="" type="text" placeholder="type your PIN" class="input input-bordered"
+                                <input id="pin-out" value="" type="text" placeholder="type your PIN" class="input input-bordered"
                                     required />
                                 <label class="label">
                                     <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
@@ -154,12 +154,19 @@
                     </div>
                 </div>
             </section>
+
+            <!-- section for transection -->
+            <section id="tran-history">
+                <h1 class="text-2xl font-bold pl-8">Transection History</h1>
+            </section>
         </header>
     </section>
 
 
+    <script src="utilities.js"></script>
     <script src="addMoney.js"></script>
     <script src="toggle.js"></script>
     <script src="cashOut.js"></script>
+    <script src="transection.js"></script>
 </body>
 </html>

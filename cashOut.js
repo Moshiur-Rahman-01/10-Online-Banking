@@ -1,22 +1,24 @@
 document.getElementById("out").addEventListener("click",
     function (event) {
         event.preventDefault();
-        const amount = document.getElementById("amount-out").value;
-        const convertedAmount = parseFloat(amount);
-
-        const pin = document.getElementById("pin").value;
-        const convertedPin = parseInt(pin);
-
-        const mainBalance = document.getElementById("main-balance").innerText;
-        const cMB = parseFloat(mainBalance);
+        const amount = getInputValueById("amount-out");
+        const pin = getInputValueById("pin-out");
+        const mainBalance = getInnerTextById("main-balance");
 
         if (amount && pin) {
-            if (convertedPin === 7010) {
-                const sub = cMB - convertedAmount;
-                document.getElementById("main-balance").innerText = sub;
+            if (pin === 1234) {
+                const sub = mainBalance - amount;
+                setInnerTextByIdAndValue("main-balance", sub);
+
+                const container = document.getElementById("tran-history");
+                const p = document.createElement("p");
+                p.innerText = `
+                    cashout ${amount} from ${pin} Pin
+                `
+                container.appendChild(p);
             }
             else {
-                alert("chudir vai");
+                alert("pin thik koro");
             }
         }
         else {
